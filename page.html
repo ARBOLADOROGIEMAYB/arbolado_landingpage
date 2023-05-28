@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale-1.0">
+	<title>Landing Page Activity 2</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+	<section>
+		<input type="checkbox" id="check">
+		<div class="circle"></div>
+		<header>
+			<h2> <a href="#" class="logo"><img src="images/logo.png"></a></h2>
+			<div class="navigation">
+				<a onclick="imgSlider('images/barbie.jpg');changeColor('#a426de')">Home</a>
+				<a onclick="imgSlider('images/about.png');changeColor('#12151c')">About</a>
+				<a onclick="imgSlider('images/review.png');changeColor('#f2fa14')">Ratings</a>
+			</div>
+			<label for="check">
+				<i class="fas fa-bars menu-btn"></i>
+				<i class="fas fa-times close-btn"></i>
+			</label>
+		</header>
+		<div class="content">
+			<div class="info">
+				<h2>Barbie <span>and the</span> <br><span>Diamond Castle</span></h2>
+				<p>Barbie and Teresa tell us the fairy tale story of Liana and Alexa, best friends who shared everything including their love of music. One day their simple lives change when they are given an enchanted mirror and befriend the girl trapped inside! to save their new friend, Liana and Alexa embark on a dangerous journey to the hidden Diamond Castle that will put their friendship to the test. But through the power of song and with the companionship of the adorable puppies, the girls face their challenges together and learn that friendship is the true treasure.
+				</p>
+				<a href="https://www.youtube.com/embed/Or7QDkCh00k" class="trailer-btn">Play Trailer</a>
+				<a href="https://s2dfree.cc/MczozMToiNzg2MHx8NDkuMTQ1LjEzMS44MHx8MTY3MzMyMTY3MSI7.html" class="trailer-btn">Play Movie</a>
+
+			</div>
+			<div class="imgMovie">
+				<img src="images/barbie.jpg" class="barbie">
+			</div>
+		</div>
+	</section>
+
+<script type="text/javascript">
+	function imgSlider(anything){
+		document.querySelector('.barbie').src = anything;
+	}
+	function changeColor(color){
+		const circle = document.querySelector('.circle');
+		circle.style.background = color;
+	}
+</script>
+</body>
+</html>

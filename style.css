@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+	*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "PT Serif;", serif;
+}
+
+section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex;
+	background: radial-gradient(closest-corner at 50% 50%,deeppink,deeppink,hotpink,hotpink,pink,lightpink);
+	animation: gradient 15s ease infinite;
+	background-size: cover;
+	background-position: left;
+}
+
+header{
+	position: relative;
+	top: 0;
+	width: 100%;
+	padding: 20px 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .logo img{
+    width: 80px;
+    object-fit: contain;
+}
+
+header .navigation a{
+	color: #000;
+	font-weight: 500;
+	margin-left: 40px;
+	text-decoration: none;
+	background: transparent;
+	cursor: pointer;
+	letter-spacing:1px;
+	padding: 2px 15px;
+	border-radius: 20px;
+	transition: 0.3s;
+	transition-property: background;
+}
+
+header .navigation a:not(last-child){
+	margin-right: 30px;
+}
+
+header .navigation a:hover{
+	background: #0C4F60;
+	opacity: 100%;
+    transition: .4s;
+    transform: scale(1.1);
+}
+
+.content{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1000px;
+	margin: -20px 100px;
+}
+.content .info{
+	position: relative;
+	max-width: 600px;
+}
+
+.content .info h2{
+	color: black;
+	font-size: 60px;
+	text-transform: none;
+	font-weight: 800;
+	letter-spacing: 2px;
+	line-height: 50px;
+	margin-bottom: 30px;
+    font-family: 'PT serif;', serif;
+}
+
+.content .info h2 span{
+	color: #000;
+	font-size: 40px;
+	text-transform: none;
+	font-weight: 400;
+	font-family: 'PT serif;', serif;
+}
+
+.content .info p{
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.content .info a{
+	display: inline-block;
+	margin-top: 20px;
+	padding: 8px 20px;
+	background:transparent;
+	color: #000;
+	border-radius: 30px;
+	font-weight: 400;
+	letter-spacing: 1px;
+	text-decoration: none;
+	transition: 0.3s;
+	transition-property: background;
+}
+.content .info a:hover{
+	background: #0C4F60;
+	opacity: 100%;
+    transition: .4s;
+    transform: scale(1.1);
+}
+.content .imgMovie{ 
+	width: 600px;
+	display: flex;
+	justify-content: flex-end;
+	padding-right: 50px;
+	margin-top: 0px;
+}
+.content .imgMovie img{ 
+	max-width: 340px;
+	border-radius: 30px;
+}
+.circle{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #a426de;
+	clip-path: circle(600px at right 800px) ;
+}
+label{
+	display: none;
+}
+
+#check{
+	z-index: 3;
+	display: none;
+}
+@media (max-width: 991px)
+{
+	header
+	{
+		padding: 10px;
+	}
+	header .logo
+	{
+		max-width: 60px;
+	}
+	header div
+	{
+	display: none;
+	}
+	header .navigation
+	{
+		display: none;
+	}
+	label
+	{
+		padding-right: 20px;
+		display: block;
+		font-size: 20px;
+		cursor: pointer;
+		transition: 0.3s;
+		transition-property: color;
+	}
+
+	label:hover
+	{
+	color:#fff;
+	}
+
+	label .close-btn
+	{
+	display: none;
+	}
+
+	#check:checked ~ header .navigation
+	{
+		z-index: 2;
+		position: fixed;
+		background: rgba(250, 75, 190, 0.9);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#check:checked ~ header .navigation a
+	{
+		font-weight: 700;
+		margin-right: 0;
+		margin-bottom: 50px;
+		letter-spacing: 2px;
+	}
+	#check:checked ~ header label .menu-btn
+	{
+		display: none;
+	}
+	#check:checked ~ header label .close-btn
+	{
+		z-index: 2;
+		display: block;
+		position: fixed;
+	}
+	label .menu-btn
+	{
+		position: absolute;
+	}
+	section
+	{
+		padding: 20px;
+	}
+	.content
+	{
+		flex-direction: column;
+		margin-top: 20px;
+	}
+	.content .info h2
+	{
+		font-size: 2.5em;
+	}
+	.content .info
+	{
+		max-width: 100%;
+	}
+	.content .info p
+	{
+		max-width: 75%;
+	}
+	.content .imgMovie
+	{
+		max-width: 100%;
+		justify-content: center;
+		padding-right: 185px;
+	}
+	.content .imgMovie img
+	{
+		max-width: 250px;
+	}
+	.circle
+	{
+		clip-path: circle(300px at center bottom);
+	}
+}
